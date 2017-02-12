@@ -278,7 +278,7 @@ Clones Effect
   background: #ffffff;
 }
 .clones-transition .cd-modal .modal-close {
-  background: #2e2e2e;
+  background: lightgray;
 }
 .clones-transition .cd-modal .modal-close:hover {
   background: #2e2e2e;
@@ -307,6 +307,43 @@ Clones Effect
     font-size: 5.6rem;
   }
 }
+
+/* -----------------------
+Schedule List
+--------------------------*/
+
+.schedule-list {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 60%; }
+  .schedule-list ul {
+    padding-left: 0; }
+  .schedule-list li {
+    padding: 10px; }
+    @media (max-device-width: 860px), (max-width: 860px) {
+      .schedule-list li {
+        font-size: 22px !important; } }
+  @media (max-device-width: 860px), (max-width: 860px) {
+    .schedule-list {
+      width: 85%; } }
+
+.list-time {
+  width: 23%;
+  text-align: right;
+  margin-right: 25px; }
+
+.list-name {
+  width: 50%;
+  text-align: left;
+  margin-left: 25px; }
+
+
+
+
 
 /* --------------------------------
 
