@@ -237,7 +237,7 @@ h1 {
   }
 
 .navpartsleft {
-  padding-top: 18px;
+  padding-top: 15px;
   padding-left: 40px;
   float: left;
   font-size: 16px;
@@ -247,7 +247,7 @@ h1 {
 }
 
 .navpartsright {
-  padding-top: 18px;
+  padding-top: 15px;
   padding-right: 40px;
   float: right;
   font-size: 16px;
@@ -351,8 +351,19 @@ Schedule List
   text-align: left;
   margin-left: 25px; }
 
+  /* -----------------------
+  Registration
+  --------------------------*/
 
+  .submit {
+    background-color: lightgray;
 
+  }
+
+  .dark-input {
+    color: #2e2e2e !important;
+
+  }
 
 
 /* --------------------------------
@@ -423,4 +434,6 @@ Animations
     -webkit-transform: translateY(-50%) translateX(-97.5%);
             transform: translateY(-50%) translateX(-97.5%);
   }
+
+
 }
