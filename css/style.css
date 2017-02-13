@@ -369,6 +369,38 @@ Schedule List
     font-size: 14px !important;
   }
 
+  /* -----------------------
+  Contacts
+  --------------------------*/
+
+  .contacts {
+    background-color: lightgray;
+  }
+
+  .member {
+    background-color: lightgray;
+  }
+
+  .member h4 {
+    font-family: "Raleway";
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .member p {
+    font-family: "Raleway";
+    text-align: center;
+  }
+
+
+  .img-circle {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+
+
 
 /* --------------------------------
 
