@@ -275,7 +275,7 @@ Clones Effect
   color: #ffffff;
 }
 .clones-transition .cd-main-content {
-  background: lightgray;
+  background: rgba(192,192,192,.75);
 }
 .clones-transition .cd-modal {
   background: #2e2e2e;

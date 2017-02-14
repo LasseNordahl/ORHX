@@ -1,4 +1,9 @@
+
+<script src="https://npmcdn.com/particlesjs@1.0.2/dist/particles.min.js"></script>
 	<!doctype html>
+
+
+
 	<html lang="en" class="no-js">
 		<head>
 			<meta charset="UTF-8">
@@ -6,16 +11,17 @@
 			<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 			<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 			<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+			<link href="css/particle.css" rel="stylesheet"> <!-- Particle -->
 			<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 			<title>ORHX</title>
 
 				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 			<link href="https://cdn.muicss.com/mui-0.9.9-rc2/css/mui.min.css" rel="stylesheet" type="text/css" />
     	<script src="https://cdn.muicss.com/mui-0.9.9-rc2/js/mui.min.js"></script>
-
 			<script src="https://use.fontawesome.com/11d46c1bf8.js"></script>
+			<!-- Particle.js CDN -->
+
 
 		</head>
 
@@ -29,6 +35,8 @@
 		<li style = "float: right;"><a class = "navpartsright" href = "signup.html">SIGN UP</a></li>
 		</ul>
 	</div>
+
+	<canvas id="myCanvas"></canvas>
 
 	<main class="cd-main-content">
 
@@ -204,6 +212,22 @@
 		if( !window.jQuery ) document.write('<script src="js/jquery-2.2.1-min.js"><\/script>');
 	</script>
 	<script src="js/main.js"></script> <!-- Resource jQuery -->
-	<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 	</body>
 	</html>
+
+	<script>
+	  window.onload = function() {
+	    Particles.init({ options });
+	  };
+	  //blue hex color #00559
+	  // e.g.
+	  window.onload = function() {
+	    Particles.init({
+	      maxParticles: '150',
+	      selector: '#myCanvas',
+	      color: '#000080',
+	      connectParticles: 'true'
+	    });
+	  };
+	</script>

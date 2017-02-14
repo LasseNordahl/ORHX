@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 	});
 
 	//open modal window
-	modalTrigger.on('click', function(event){	
+	modalTrigger.on('click', function(event){
 		event.preventDefault();
 		var modalId = $(event.target).attr('href');
 		transitionLayer.addClass('visible opening');
@@ -63,7 +63,6 @@ jQuery(document).ready(function($){
 	}
 
 
-	particlesJS();
+	//particlesJS();
 
 });
-
