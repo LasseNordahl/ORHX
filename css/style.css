@@ -392,6 +392,12 @@ Schedule List
     text-align: center;
   }
 
+  .member a {
+    text-align: center;
+    display: block;
+    color: #2e2e2e;
+  }
+
 
   .img-circle {
     width: 150px;
@@ -400,6 +406,19 @@ Schedule List
     margin: 0 auto;
   }
 
+  /* --------------------------------
+  FontAwesome Changes (Contacts.css)
+  -------------------------------- */
+
+  .fa-github:hover {
+    color: #000080;
+  }
+  .fa-instagram:hover {
+    color: #000080;
+  }
+  .fa-envelope:hover {
+    color: #000080;
+  }
 
 
 /* --------------------------------
