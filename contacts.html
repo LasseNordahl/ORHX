@@ -1,3 +1,5 @@
+<script src="https://npmcdn.com/particlesjs@1.0.2/dist/particles.min.js"></script>
+
 <!doctype html>
 <html lang="en" class="no-js">
 
@@ -7,6 +9,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <link href="css/particle.css" rel="stylesheet"> <!-- Particle -->
 		<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -19,6 +22,7 @@
 		<title>ORHX</title>
   </head>
 
+<canvas id="myCanvas"></canvas>
   <body class="contacts">
     <div class="member">
 
@@ -101,12 +105,24 @@
         </div>
         <div class="mui-col-md-2"></div>
       </div>
+
     </div>
   </body>
 
-
-
-
-
-
 </html>
+
+<script>
+  window.onload = function() {
+    Particles.init({ options });
+  };
+  //blue hex color #00559
+  // e.g.
+  window.onload = function() {
+    Particles.init({
+      maxParticles: '150',
+      selector: '#myCanvas',
+      color: '#8787ad',
+      connectParticles: 'true'
+    });
+  };
+</script>

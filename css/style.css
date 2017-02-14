@@ -374,11 +374,11 @@ Schedule List
   --------------------------*/
 
   .contacts {
-    background-color: lightgray;
+    background-color: rgba(192,192,192,.90);
   }
 
   .member {
-    background-color: lightgray;
+
   }
 
   .member h4 {
