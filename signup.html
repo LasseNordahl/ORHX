@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+		<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<link href="https://cdn.muicss.com/mui-0.9.9-rc2/css/mui.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.muicss.com/mui-0.9.9-rc2/js/mui.min.js"></script>
+
+		<title>ORHX</title>
+	</head>
+	<body class="submit">
+		<form class="mui-form" method="post" action="query.php">
+
+			<div class="mui-row" style="margin: auto; margin-top: 30px;">
+		    <div class="mui-col-md-3"></div>
+		    <div class="mui-col-md-6">
+					<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:3%;"> ORHX Sign Ups </h1>
+					<div class="mui-textfield mui-textfield--float-label">
+						<input class="dark-input" type="text" name = "fullname">
+						<label class="dark-input">Name</label>
+					</div>
+
+					<div class="mui-textfield mui-textfield--float-label">
+						<input class="dark-input" type="email" name="email">
+						<label class="dark-input" >Email</label>
+					</div>
+
+					<div class="mui-select">
+						<select class="dark-input" name="priorinfo">
+							<option> </option>
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+						<label class="dark-input input-size">Is this your first hackathon?</label>
+					</div>
+
+					<div class="mui-select">
+						<select name="gender">
+							<option> </option>
+							<option>Male</option>
+							<option>Female</option>
+							<option>Prefer not to answer</option>
+						</select>
+						<label class="dark-input input-size">Gender</label>
+					</div>
+
+					<div class="mui-select">
+						<select name="tshirt">
+							<option> </option>
+							<option>Small</option>
+							<option>Medium</option>
+							<option>Large</option>
+							<option>X-Large</option>
+						</select>
+						<label class="dark-input input-size">T-Shirt Size</label>
+					</div>
+
+					<div class="mui-textfield mui-textfield--float-label">
+						<textarea class="dark-input" name="diet"></textarea>
+						<label class="dark-input input-size">Dietary Restrictions</label>
+					</div>
+
+					<button class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn">Submit</button>
+
+				</div>
+		    <div class="mui-col-md-3"></div>
+	  	</div
+
+
+		</form>
+	</body>
+</html>
