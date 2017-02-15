@@ -266,6 +266,70 @@ h1 {
   text-decoration: none;
 }
 
+/* --------------------------------
+
+Footer
+
+-------------------------------- */
+
+.footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer img {
+  max-width: 250px;
+  margin-bottom: 15px;
+}
+
+.footer h3 {
+  font-family: 'Raleway';
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+/* --------------------------------
+
+Sponsors
+
+-------------------------------- */
+
+  .sponsors {
+    background-color: rgba(192,192,192,.75);
+    font-family: 'Raleway';
+    font-weight: bold;
+  }
+
+  .sponsors p {
+    margin:0 !important;
+    font-family: 'Raleway';
+    color: #2e2e2e;
+    font-size: 20;
+  }
+
+  .sponsors img{
+    max-width: 250px;
+    max-height: 250px;
+    margin: 15px;
+
+    display: block;
+    margin:auto;
+
+  }
+
+  .partners h1 {
+    font-family: 'Raleway';
+    letter-spacing: .1em;
+    font-weight: bold;
+    color: #2e2e2e;
+    padding-top: 30px;
+    text-align:center;
+  }
+
+
 
 /* --------------------------------
 
