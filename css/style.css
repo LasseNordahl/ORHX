@@ -290,6 +290,13 @@ Footer
   margin: 0;
 }
 
+.footer a {
+  color: rgb(192,192,192);
+}
+
+.sponsor-button {
+  margin-left: 40% !important;
+}
 
 /* --------------------------------
 
@@ -496,14 +503,21 @@ Schedule List
   -------------------------------- */
 
   .fa-github:hover {
-    color: #000080;
+    color: #f6d962;
   }
   .fa-instagram:hover {
-    color: #000080;
+    color: #f6d962;
   }
   .fa-envelope:hover {
-    color: #000080;
+    color: #f6d962;
   }
+  .fa-facebook-square:hover {
+    color: #f6d962;
+  }
+  .fa-twitter-square:hover {
+    color: #f6d962;
+  }
+
 
 
 /* --------------------------------
