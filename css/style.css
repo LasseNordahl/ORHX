@@ -246,6 +246,11 @@ h1 {
   font-weight: 700;
 }
 
+.navpartsleft:hover{
+  color: #f6d962;
+  text-decoration: none;
+}
+
 .navpartsright {
   padding-top: 15px;
   padding-right: 40px;
@@ -255,6 +260,12 @@ h1 {
   letter-spacing: .15em;
   font-weight: 700;
 }
+
+.navpartsleft:hover{
+  color: #f6d962;
+  text-decoration: none;
+}
+
 
 /* --------------------------------
 
@@ -274,6 +285,12 @@ Clones Effect
   background: #2e2e2e;
   color: #ffffff;
 }
+
+.clones-transition .cd-btn:hover {
+  color: #f6d962;
+  text-decoration: none;
+}
+
 .clones-transition .cd-main-content {
   background: rgba(192,192,192,.75);
 }
