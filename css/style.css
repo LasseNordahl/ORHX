@@ -341,6 +341,12 @@ Sponsors
     margin-right: 0 !important;
   }
 
+  .mui-btn--primary {
+    color: lightgray !important;
+    background-color: #2e2e2e !important;
+  }
+
+
 
 /* --------------------------------
 
