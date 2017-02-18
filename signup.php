@@ -49,7 +49,7 @@
 			$(function () {
 				$("#gender, #priorinfo, #email, #fullname, #tshirt").bind("change keyup",
 		function () {      
-			if ($("#gender").val() != "" && $("#priorinfo").val() != "" && $("#email").val().includes("@") && $("#fullname").val() != "" && $("#tshirt").val() != "")
+			if ($("#gender").val() != "" && $("#priorinfo").val() != "" && $("#email").val().includes("@") && $("#fullname").val() != "" && $("#tshirt").val() != "" && $("#email").val().substr(0,$("#email").val().indexOf('@'))!="" && $("#email").val().split('@')[0] != "" && $("#email").val().split('@')[1] != "")
 				$(this).closest("form").find(":submit").removeAttr("disabled");
 			else
 				$(this).closest("form").find(":submit").attr("disabled", "disabled");      
@@ -61,85 +61,58 @@
 		
 		<title>ORHX</title>
 		<style>
-		/* The Modal (background) */
-		.modal {
-			display: none; /* Hidden by default */
-			position: fixed; /* Stay in place */
-			z-index: 1; /* Sit on top */
-			left: 0;
-			top: 0;
-			width: 100%; /* Full width */
-			height: 100%; /* Full height */
-			overflow: auto; /* Enable scroll if needed */
-			background-color: rgb(0,0,0); /* Fallback color */
-			background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-			-webkit-animation-name: fadeIn; /* Fade in the background */
-			-webkit-animation-duration: 0.4s;
-			animation-name: fadeIn;
-			animation-duration: 0.4s
-		}
-
-		/* Modal Content */
-		.modal-content {
-			position: fixed;
-			bottom: 0;
-			background-color: #fefefe;
-			width: 100%;
-			-webkit-animation-name: slideIn;
-			-webkit-animation-duration: 0.4s;
-			animation-name: slideIn;
-			animation-duration: 0.4s
-		}
-
-		/* The Close Button */
-		.close {
-			color: white;
-			float: right;
-			font-size: 28px;
-			font-weight: bold;
-		}
-
-		.close:hover,
-		.close:focus {
-			color: #000;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-		.modal-header {
-			padding: 2px 16px;
-			background-color: #00abff;
-			color: white;
-		}
-
-		.modal-body {padding: 2px 16px;}
-
-		.modal-footer {
-			padding: 2px 16px;
-			background-color: #00abff;
-			color: white;
-		}
-
-		/* Add Animation */
-		@-webkit-keyframes slideIn {
-			from {bottom: -300px; opacity: 0}
-			to {bottom: 0; opacity: 1}
-		}
-
-		@keyframes slideIn {
-			from {bottom: -300px; opacity: 0}
-			to {bottom: 0; opacity: 1}
-		}
-
-		@-webkit-keyframes fadeIn {
-			from {opacity: 0}
-			to {opacity: 1}
-		}
-
-		@keyframes fadeIn {
-			from {opacity: 0}
-			to {opacity: 1}
-		}
+			/* The Modal (background) */
+			.modalDialog {
+				position: fixed;
+				font-family: Arial, Helvetica, sans-serif;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: rgba(0,0,0,0.8);
+				z-index: 99999;
+				opacity:0;
+				-webkit-transition: opacity 400ms ease-in;
+				-moz-transition: opacity 400ms ease-in;
+				transition: opacity 400ms ease-in;
+				pointer-events: none;
+			}
+			.modalDialog:target {
+				opacity:1;
+				pointer-events: auto;
+			}
+			
+			.modalDialog > div {
+				width: 400px;
+				position: relative;
+				margin: 10% auto;
+				padding: 5px 20px 13px 20px;
+				border-radius: 10px;
+				background: #fff;
+				background: -moz-linear-gradient(#fff, #999);
+				background: -webkit-linear-gradient(#fff, #999);
+				background: -o-linear-gradient(#fff, #999);
+			}
+			.close {
+				background: #606061;
+				color: #FFFFFF;
+				line-height: 25px;
+				position: absolute;
+				right: -12px;
+				text-align: center;
+				top: -10px;
+				width: 24px;
+				text-decoration: none;
+				font-weight: bold;
+				-webkit-border-radius: 12px;
+				-moz-border-radius: 12px;
+				border-radius: 12px;
+				-moz-box-shadow: 1px 1px 3px #000;
+				-webkit-box-shadow: 1px 1px 3px #000;
+				box-shadow: 1px 1px 3px #000;
+			}
+			
+			.close:hover { background: #00d9ff; }
 		</style>
 
 	</head>
@@ -207,7 +180,7 @@
 						<label class="dark-input input-size">Dietary Restrictions</label>
 					</div>
 
-					<button id="myBtn" class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn" disabled="disabled">Submit</button>
+					<button id="myBtn" class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn" disabled="disabled" >Submit</button>
 
 				</div>
 		    <div class="mui-col-md-3"></div>
@@ -217,48 +190,20 @@
 		</form>
 
 		<!-- The Modal -->
-		<div id="myModal" class="modal">
+		<div id="openModal" class="modalDialog">
 			<!-- Modal content -->
-			<div class="modal-content">
-				<div class="modal-header">
-					<span class="close">&times;</span>
-					<h2>Thanks!</h2>
-				</div>
-					<div class="modal-body">
-					<p>Thank you for submitting your application, we will get back to you as soon as possible</p>
-				</div>
-					<div class="modal-footer">
-					<h3>-ORHX</h3>
-				</div>
+			<div>
+				<a  href="index.html" title="Close" class="close">X</a>
+				<p>Thank you for submitting your application, we will get back to you as soon as possible</p>
 			</div>
 		</div>
-
 		<script>
-			// Get the modal
-			var modal = document.getElementById('myModal');
-
-			// Get the button that opens the modal
 			var btn = document.getElementById("myBtn");
-
-			// Get the <span> element that closes the modal
-			var span = document.getElementsByClassName("close")[0];
-
-			// When the user clicks the button, open the modal
 			btn.onclick = function() {
-				modal.style.display = "block";
-			}
+				location.href = "#openModal";
+			};
 
-			// When the user clicks on <span> (x), close the modal
-			span.onclick = function() {
-				modal.style.display = "none";
-			}
-
-			// When the user clicks anywhere outside of the modal, close it
-			window.onclick = function(event) {
-				if (event.target == modal) {
-					modal.style.display = "none";
-				}
-			}
 		</script>
+
 	</body>
 </html>
