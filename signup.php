@@ -7,15 +7,15 @@
 	}
 	if (isset($_POST['btn'])){
 		$fullname = mysqli_real_escape_string($db, $_POST['fullname']);
-		
+
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 
 		$tshirt = mysqli_real_escape_string($db, $_POST['tshirt']);
 
 		$gender = mysqli_real_escape_string($db, $_POST['gender']);
-		
+
 		$priorinfo = mysqli_real_escape_string($db, $_POST['priorinfo']);
-		
+
 		$diet = mysqli_real_escape_string($db, $_POST['diet']);
 
 		$command = "INSERT INTO Data(fullname, email, tshirt, gender, priorinfo, diet) VALUES('$fullname','$email', '$tshirt', '$gender', '$priorinfo', '$diet')";
@@ -32,6 +32,8 @@
 ?>
 
 <!doctype html>
+<script src="https://use.fontawesome.com/11d46c1bf8.js"></script>
+
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8">
@@ -45,6 +47,7 @@
 
 		<link href="https://cdn.muicss.com/mui-0.9.9-rc2/css/mui.min.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.muicss.com/mui-0.9.9-rc2/js/mui.min.js"></script>
+
 
 		<title>ORHX</title>
 		<style>
@@ -65,7 +68,7 @@
 			animation-name: fadeIn;
 			animation-duration: 0.4s
 		}
-		
+
 		/* Modal Content */
 		.modal-content {
 			position: fixed;
@@ -77,7 +80,7 @@
 			animation-name: slideIn;
 			animation-duration: 0.4s
 		}
-		
+
 		/* The Close Button */
 		.close {
 			color: white;
@@ -85,58 +88,64 @@
 			font-size: 28px;
 			font-weight: bold;
 		}
-		
+
 		.close:hover,
 		.close:focus {
 			color: #000;
 			text-decoration: none;
 			cursor: pointer;
 		}
-		
+
 		.modal-header {
 			padding: 2px 16px;
 			background-color: #00abff;
 			color: white;
 		}
-		
+
 		.modal-body {padding: 2px 16px;}
-		
+
 		.modal-footer {
 			padding: 2px 16px;
 			background-color: #00abff;
 			color: white;
 		}
-		
+
 		/* Add Animation */
 		@-webkit-keyframes slideIn {
-			from {bottom: -300px; opacity: 0} 
+			from {bottom: -300px; opacity: 0}
 			to {bottom: 0; opacity: 1}
 		}
-		
+
 		@keyframes slideIn {
 			from {bottom: -300px; opacity: 0}
 			to {bottom: 0; opacity: 1}
 		}
-		
+
 		@-webkit-keyframes fadeIn {
-			from {opacity: 0} 
+			from {opacity: 0}
 			to {opacity: 1}
 		}
-		
+
 		@keyframes fadeIn {
-			from {opacity: 0} 
+			from {opacity: 0}
 			to {opacity: 1}
 		}
 		</style>
-		
+
 	</head>
 	<body class="submit">
 		<form class="mui-form" method="post" action="signup.php">
 
-			<div class="mui-row" style="margin: auto; margin-top: 30px;">
-		    <div class="mui-col-md-3"></div>
-		    <div class="mui-col-md-6">
-					<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:3%;"> ORHX Sign Ups </h1>
+
+			<div class="mui-col-md-1">
+				<button class="mui-btn mui-btn--fab mui-btn--primary button-footer-hover"	style="display:block; margin-top:15px !important; margin-left:1px !important;" onClick="goBack()">
+					<i class="fa fa-arrow-left button-footer-hover fa-lg"  aria-hidden="true"></i>
+				</button>
+			</div>
+			<div class="mui-col-md-2"></div>
+			<div class="mui-col-md-6">
+				<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:10%;"> ORHX Sign Ups </h1>
+				
 					<div class="mui-textfield mui-textfield--float-label">
 						<input class="dark-input" type="text" name = "fullname">
 						<label class="dark-input">Name</label>
@@ -183,14 +192,14 @@
 					</div>
 
 					<button id="myBtn" class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn">Submit</button>
-					
+
 				</div>
 		    <div class="mui-col-md-3"></div>
 	  	</div
 
 
 		</form>
-		
+
 		<!-- The Modal -->
 		<div id="myModal" class="modal">
 			<!-- Modal content -->
@@ -207,27 +216,27 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<script>
 			// Get the modal
 			var modal = document.getElementById('myModal');
-			
+
 			// Get the button that opens the modal
 			var btn = document.getElementById("myBtn");
-			
+
 			// Get the <span> element that closes the modal
 			var span = document.getElementsByClassName("close")[0];
-			
-			// When the user clicks the button, open the modal 
+
+			// When the user clicks the button, open the modal
 			btn.onclick = function() {
 				modal.style.display = "block";
 			}
-			
+
 			// When the user clicks on <span> (x), close the modal
 			span.onclick = function() {
 				modal.style.display = "none";
 			}
-			
+
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
 				if (event.target == modal) {
@@ -235,6 +244,6 @@
 				}
 			}
 		</script>
-		
+
 	</body>
 </html>
