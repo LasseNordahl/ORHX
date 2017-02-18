@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	$db = mysqli_connect("localhost", "orhx_web_user1", "orhx_web_user1", "ORHX Sign Ups");
+	$db = mysqli_connect("localhost", "root", "", "ORHX Sign Ups");
 	if (mysqli_connect_errno()) {
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
@@ -23,10 +23,7 @@
 		if (!mysqli_query($db,$command)) {
   			die('Error: ' . mysqli_error($db));
 		}
-		echo "1 record added";
-
 		mysqli_close($db);
-		$_SESSION['message'] = "Thanks for the submission!";
 
 	}
 ?>
@@ -48,7 +45,20 @@
 		<link href="https://cdn.muicss.com/mui-0.9.9-rc2/css/mui.min.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.muicss.com/mui-0.9.9-rc2/js/mui.min.js"></script>
 
+		<script type="text/javascript">
+			$(function () {
+				$("#gender, #priorinfo, #email, #fullname, #tshirt").bind("change keyup",
+		function () {      
+			if ($("#gender").val() != "" && $("#priorinfo").val() != "" && $("#email").val().includes("@") && $("#fullname").val() != "" && $("#tshirt").val() != "")
+				$(this).closest("form").find(":submit").removeAttr("disabled");
+			else
+				$(this).closest("form").find(":submit").attr("disabled", "disabled");      
+			});
+				});
+		</script>
 
+		
+		
 		<title>ORHX</title>
 		<style>
 		/* The Modal (background) */
@@ -145,51 +155,51 @@
 			</div>
 			<div class="mui-col-md-9"></div>
 		</div>
-
-		<form class="mui-form" method="post" action="signup.php">
+		<iframe name="votar" style="display:none;"></iframe>
+		<form class="mui-form" method="post" action="signup.php" target="votar">
 
 			<div class="mui-col-md-3"></div>
 			<div class="mui-col-md-6">
 				<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:10%;"> ORHX Sign Ups </h1>
 
 					<div class="mui-textfield mui-textfield--float-label">
-						<input class="dark-input" type="text" name = "fullname">
-						<label class="dark-input">Name</label>
+						<input class="dark-input" type="text" name = "fullname" id="fullname">
+						<label class="dark-input">Name*</label>
 					</div>
 
 					<div class="mui-textfield mui-textfield--float-label">
-						<input class="dark-input" type="email" name="email">
-						<label class="dark-input" >Email</label>
+						<input class="dark-input" type="email" name="email" id="email">
+						<label class="dark-input" >Email*</label>
 					</div>
 
 					<div class="mui-select">
-						<select class="dark-input" name="priorinfo">
+						<select class="dark-input" name="priorinfo" id="priorinfo">
 							<option> </option>
 							<option>Yes</option>
 							<option>No</option>
 						</select>
-						<label class="dark-input input-size">Is this your first hackathon?</label>
+						<label class="dark-input input-size">Is this your first hackathon?*</label>
 					</div>
 
 					<div class="mui-select">
-						<select name="gender">
+						<select name="gender" id="gender">
 							<option> </option>
 							<option>Male</option>
 							<option>Female</option>
 							<option>Prefer not to answer</option>
 						</select>
-						<label class="dark-input input-size">Gender</label>
+						<label class="dark-input input-size">Gender*</label>
 					</div>
 
 					<div class="mui-select">
-						<select name="tshirt">
+						<select name="tshirt" id="tshirt">
 							<option> </option>
 							<option>Small</option>
 							<option>Medium</option>
 							<option>Large</option>
 							<option>X-Large</option>
 						</select>
-						<label class="dark-input input-size">T-Shirt Size</label>
+						<label class="dark-input input-size">T-Shirt Size*</label>
 					</div>
 
 					<div class="mui-textfield mui-textfield--float-label">
@@ -197,7 +207,7 @@
 						<label class="dark-input input-size">Dietary Restrictions</label>
 					</div>
 
-					<button id="myBtn" class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn">Submit</button>
+					<button id="myBtn" class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn" disabled="disabled">Submit</button>
 
 				</div>
 		    <div class="mui-col-md-3"></div>
@@ -250,6 +260,5 @@
 				}
 			}
 		</script>
-
 	</body>
 </html>
