@@ -483,11 +483,13 @@ Schedule List
     font-family: "Raleway";
     text-align: center;
     font-weight: bold;
+    font-size: 18;
   }
 
   .member p {
     font-family: "Raleway";
     text-align: center;
+    font-size: 16;
   }
 
   .member a {
@@ -509,7 +511,7 @@ Schedule List
   -------------------------------- */
 
   .button-hover:hover {
-    color: #d1af21;
+    color: #000558;
   }
 
   .button-footer-hover:hover {
