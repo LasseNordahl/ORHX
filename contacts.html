@@ -32,13 +32,19 @@
 
       <div class="mui-row">
         <div class="mui-col-md-1">
-          <button class="mui-btn mui-btn--fab mui-btn--primary button-footer-hover"	style="display:block; margin: auto!important; margin-top: 10px!important;">
-            <a class="fa fa-arrow-left button-footer-hover fa-lg" aria-hidden="false"></a>
-          </button>
+          <button class="mui-btn mui-btn--fab mui-btn--primary button-footer-hover"	style="display:block; margin-top:15px !important; margin-left:1px !important;" onClick="goBack()">
+            <i class="fa fa-arrow-left button-footer-hover fa-lg" aria-hidden="true"></i>
+  				</button>
         </div>
+        <div class="mui-col-md-3"></div>
+        <div class="mui-col-md-4">
+            <h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:10%;"> ORHX Team Members </h1>
+        </div>
+        <div class="mui-col-md-4"></div>
       </div>
 
-        <h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:3%;"> ORHX Team Members </h1>
+      <br>
+      <br>
 
             <div class="mui-row" style="margin-left: 10%; margin-right: 10%; margin-bottom:5%;">
               <div class="mui-col-md-4">
@@ -137,4 +143,10 @@
       connectParticles: 'true'
     });
   };
+</script>
+
+<script>
+function goBack() {
+    window.history.back();
+}
 </script>
