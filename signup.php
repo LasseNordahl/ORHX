@@ -160,7 +160,7 @@
 
 			<div class="mui-col-md-3"></div>
 			<div class="mui-col-md-6">
-				<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:10%;"> ORHX Sign Ups </h1>
+				<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%;"> ORHX Sign Ups </h1>
 
 					<div class="mui-textfield mui-textfield--float-label">
 						<input class="dark-input" type="text" name = "fullname" id="fullname">
