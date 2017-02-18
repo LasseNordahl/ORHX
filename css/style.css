@@ -508,21 +508,14 @@ Schedule List
   FontAwesome Changes (Contacts.css)
   -------------------------------- */
 
-  .fa-github:hover {
-    color: #f6d962;
+  .button-hover:hover {
+    color: #d1af21;
   }
-  .fa-instagram:hover {
-    color: #f6d962;
+
+  .button-footer-hover:hover {
+    color: #f6d962 !important;
   }
-  .fa-envelope:hover {
-    color: #f6d962;
-  }
-  .fa-facebook-square:hover {
-    color: #f6d962;
-  }
-  .fa-twitter-square:hover {
-    color: #f6d962;
-  }
+
 
 
 
