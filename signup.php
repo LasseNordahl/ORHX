@@ -138,14 +138,14 @@
 
 
 			<div class="mui-col-md-1">
-				<button class="mui-btn mui-btn--fab mui-btn--primary button-footer-hover"	style="display:block; margin-top:15px !important; margin-left:1px !important;" onClick="goBack()">
+				<button class="mui-btn mui-btn--fab mui-btn--primary button-footer-hover"	style="display:block; margin-top:15px !important; margin-left:1px !important;" onClick="window.location.href='http://www.orhacks.com/'">
 					<i class="fa fa-arrow-left button-footer-hover fa-lg"  aria-hidden="true"></i>
 				</button>
 			</div>
 			<div class="mui-col-md-2"></div>
 			<div class="mui-col-md-6">
 				<h1 style="text-align: center; font-family: Raleway; margin-bottom:3%; margin-top:10%;"> ORHX Sign Ups </h1>
-				
+
 					<div class="mui-textfield mui-textfield--float-label">
 						<input class="dark-input" type="text" name = "fullname">
 						<label class="dark-input">Name</label>
