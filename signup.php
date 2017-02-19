@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	$db = mysqli_connect("localhost", "root", "", "ORHX Sign Ups");
+	$db = mysqli_connect("localhost", "orhx_web_user1", "orhx_web_user1", "ORHX Sign Ups");
 	if (mysqli_connect_errno()) {
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
