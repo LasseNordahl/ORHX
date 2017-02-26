@@ -306,7 +306,7 @@ Sponsors
 -------------------------------- */
 
   .sponsors {
-    background-color: rgba(192,192,192,.75);
+    background-color: rgba(255,255,255,.75);
     font-family: 'Raleway';
     font-weight: bold;
   }
@@ -374,7 +374,7 @@ Clones Effect
 }
 
 .clones-transition .cd-main-content {
-  background: rgba(192,192,192,.75);
+  background: rgba(255,255,255,.75);
 }
 .clones-transition .cd-modal {
   background: #2e2e2e;
@@ -473,7 +473,7 @@ Schedule List
   --------------------------*/
 
   .contacts {
-    background-color: rgba(192,192,192,.90);
+    background-color: rgba(255,255,255,.90);
   }
 
 
