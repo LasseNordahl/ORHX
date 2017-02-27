@@ -159,6 +159,11 @@
 						<label class="dark-input input-size">Is this your first hackathon?*</label>
 					</div>
 
+					<div class="mui-textfield mui-textfield--float-label">
+						<textarea class="dark-input" name="diet"></textarea>
+						<label class="dark-input input-size">Please describe your previous CS experience.*</label>
+					</div>
+
 					<div class="mui-select">
 						<select name="gender" id="gender">
 							<option> </option>
@@ -195,7 +200,7 @@
 					</div>
 
 
-				</div>
+				<div>
 						<p style="text-align:center;margin-left:10px; margin-right: 10px"> Disclaimer: </p>
 						<p style="text-align:center;margin-left:10px; margin-right: 10px"> If you are unable to bring a computer to the hackathon, please contact us using "contact us" link on the homepage. </p>
 						<p style="text-align:center;margin-left:10px; margin-right: 10px"> Our computer supply is limited, and will be given to use on a first come, first serve basis. </p>
