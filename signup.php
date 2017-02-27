@@ -2,6 +2,7 @@
 	session_start();
 
 	$db = mysqli_connect("localhost", "orhx_web_user1", "orhx_web_user1", "ORHX Sign Ups");
+	//$db = mysqli_connect("localhost", "root", "", "ORHX Sign Ups");
 	if (mysqli_connect_errno()) {
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
@@ -17,8 +18,15 @@
 		$priorinfo = mysqli_real_escape_string($db, $_POST['priorinfo']);
 
 		$diet = mysqli_real_escape_string($db, $_POST['diet']);
+		
+		$highschool = mysqli_real_escape_string($db, $_POST['highschool']);
+		
+		$csexperience = mysqli_real_escape_string($db, $_POST['csexperience']);
 
-		$command = "INSERT INTO Data(fullname, email, tshirt, gender, priorinfo, diet) VALUES('$fullname','$email', '$tshirt', '$gender', '$priorinfo', '$diet')";
+		$computeravailability = mysqli_real_escape_string($db, $_POST['computeravailability']);
+
+
+		$command = "INSERT INTO Data(fullname, email, tshirt, gender, priorinfo, diet, highschool, csexperience, computeravailability) VALUES('$fullname','$email', '$tshirt', '$gender', '$priorinfo', '$diet', '$highschool', '$csexperience', '$computeravailability')";
 
 		if (!mysqli_query($db,$command)) {
   			die('Error: ' . mysqli_error($db));
@@ -47,9 +55,9 @@
 
 		<script type="text/javascript">
 			$(function () {
-				$("#gender, #priorinfo, #email, #fullname, #tshirt").bind("change keyup",
+				$("#gender, #priorinfo, #email, #fullname, #tshirt, #highschool, #csexperience, #computeravailability").bind("change keyup",
 		function () {
-			if ($("#gender").val() != "" && $("#priorinfo").val() != "" && $("#email").val().includes("@") && $("#fullname").val() != "" && $("#tshirt").val() != "" && $("#email").val().substr(0,$("#email").val().indexOf('@'))!="" && $("#email").val().split('@')[0] != "" && $("#email").val().split('@')[1] != "")
+			if ($("#gender").val() != "" && $("#priorinfo").val() != "" && $("#email").val().includes("@") && $("#fullname").val() != "" && $("#tshirt").val() != "" && $("#email").val().substr(0,$("#email").val().indexOf('@'))!="" && $("#email").val().split('@')[0] != "" && $("#email").val().split('@')[1] != "" && $("#highschool").val() != "" && $("#csexperience").val() != "" && $("#computeravailability").val() != "")
 				$(this).closest("form").find(":submit").removeAttr("disabled");
 			else
 				$(this).closest("form").find(":submit").attr("disabled", "disabled");
@@ -83,7 +91,7 @@
 			}
 
 			.modalDialog > div {
-				width: 400px;
+				width: 200px;
 				position: relative;
 				margin: 10% auto;
 				padding: 5px 20px 13px 20px;
@@ -146,7 +154,7 @@
 					</div>
 
 					<div class="mui-textfield mui-textfield--float-label">
-						<input class="dark-input" type="text" name = "fullname" id="fullname">
+						<input class="dark-input" type="text" name = "highschool" id="highschool">
 						<label class="dark-input">High School*</label>
 					</div>
 
@@ -160,7 +168,7 @@
 					</div>
 
 					<div class="mui-textfield mui-textfield--float-label">
-						<textarea class="dark-input" name="diet"></textarea>
+						<textarea class="dark-input" name="csexperience" id="csexperience"></textarea>
 						<label class="dark-input input-size">Please describe your previous CS experience.*</label>
 					</div>
 
@@ -186,12 +194,12 @@
 					</div>
 
 					<div class="mui-textfield mui-textfield--float-label">
-						<textarea class="dark-input" name="diet"></textarea>
+						<textarea class="dark-input" name="diet" id="diet"></textarea>
 						<label class="dark-input input-size">Dietary Restrictions</label>
 					</div>
 
 					<div class="mui-select">
-						<select class="dark-input" name="priorinfo" id="priorinfo">
+						<select class="dark-input" name="computeravailability" id="computeravailability">
 							<option> </option>
 							<option>Yes</option>
 							<option>No</option>
@@ -221,7 +229,8 @@
 			<!-- Modal content -->
 			<div>
 				<a  href="index.html" title="Close" class="close">X</a>
-				<p>Thank you for submitting your application, we will get back to you as soon as possible</p>
+				<p>Thank you for submitting your application.</p>
+				<p>We will get back to you as soon as possible.</p>
 			</div>
 		</div>
 		<script>
