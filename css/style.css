@@ -319,8 +319,8 @@ Sponsors
   }
 
   .sponsors img{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 250px;
+    max-height: 250px;
     margin: 15px;
 
     display: block;
@@ -455,7 +455,7 @@ Schedule List
   --------------------------*/
 
   .submit {
-    background-color: rgb(255,255,255);
+    background-color: rgb (255,255,255);
 
   }
 

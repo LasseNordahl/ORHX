@@ -48,17 +48,17 @@
 		<script type="text/javascript">
 			$(function () {
 				$("#gender, #priorinfo, #email, #fullname, #tshirt").bind("change keyup",
-		function () {      
+		function () {
 			if ($("#gender").val() != "" && $("#priorinfo").val() != "" && $("#email").val().includes("@") && $("#fullname").val() != "" && $("#tshirt").val() != "" && $("#email").val().substr(0,$("#email").val().indexOf('@'))!="" && $("#email").val().split('@')[0] != "" && $("#email").val().split('@')[1] != "")
 				$(this).closest("form").find(":submit").removeAttr("disabled");
 			else
-				$(this).closest("form").find(":submit").attr("disabled", "disabled");      
+				$(this).closest("form").find(":submit").attr("disabled", "disabled");
 			});
 				});
 		</script>
 
-		
-		
+
+
 		<title>ORHX</title>
 		<style>
 			/* The Modal (background) */
@@ -81,7 +81,7 @@
 				opacity:1;
 				pointer-events: auto;
 			}
-			
+
 			.modalDialog > div {
 				width: 400px;
 				position: relative;
@@ -111,7 +111,7 @@
 				-webkit-box-shadow: 1px 1px 3px #000;
 				box-shadow: 1px 1px 3px #000;
 			}
-			
+
 			.close:hover { background: #00d9ff; }
 		</style>
 
@@ -143,6 +143,11 @@
 					<div class="mui-textfield mui-textfield--float-label">
 						<input class="dark-input" type="email" name="email" id="email">
 						<label class="dark-input" >Email*</label>
+					</div>
+
+					<div class="mui-textfield mui-textfield--float-label">
+						<input class="dark-input" type="text" name = "fullname" id="fullname">
+						<label class="dark-input">High School*</label>
 					</div>
 
 					<div class="mui-select">
@@ -179,6 +184,23 @@
 						<textarea class="dark-input" name="diet"></textarea>
 						<label class="dark-input input-size">Dietary Restrictions</label>
 					</div>
+
+					<div class="mui-select">
+						<select class="dark-input" name="priorinfo" id="priorinfo">
+							<option> </option>
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+						<label class="dark-input input-size">Are you able to bring a computer to the event?*</label>
+					</div>
+
+
+				</div>
+						<p style="text-align:center;margin-left:10px; margin-right: 10px"> Disclaimer: </p>
+						<p style="text-align:center;margin-left:10px; margin-right: 10px"> If you are unable to bring a computer to the hackathon, please contact us using "contact us" link on the homepage. </p>
+						<p style="text-align:center;margin-left:10px; margin-right: 10px"> Our computer supply is limited, and will be given to use on a first come, first serve basis. </p>
+						<br>
+				</div>
 
 					<button id="myBtn" class="mui-btn mui-btn--raised mui-btn--primary" style="align: center;" type="submit" name = "btn" disabled="disabled" >Submit</button>
 
