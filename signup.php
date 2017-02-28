@@ -18,9 +18,9 @@
 		$priorinfo = mysqli_real_escape_string($db, $_POST['priorinfo']);
 
 		$diet = mysqli_real_escape_string($db, $_POST['diet']);
-		
+
 		$highschool = mysqli_real_escape_string($db, $_POST['highschool']);
-		
+
 		$csexperience = mysqli_real_escape_string($db, $_POST['csexperience']);
 
 		$computeravailability = mysqli_real_escape_string($db, $_POST['computeravailability']);
@@ -91,33 +91,31 @@
 			}
 
 			.modalDialog > div {
-				width: 200px;
+				width: 275px;
 				position: relative;
-				margin: 10% auto;
-				padding: 5px 20px 13px 20px;
+				margin: 30% auto;
+				padding: 20px 20px 13px 20px;
 				border-radius: 10px;
 				background: #fff;
-				background: -moz-linear-gradient(#fff, #999);
-				background: -webkit-linear-gradient(#fff, #999);
-				background: -o-linear-gradient(#fff, #999);
+
 			}
 			.close {
 				background: #606061;
 				color: #FFFFFF;
-				line-height: 25px;
+				line-height: 50px;
 				position: absolute;
 				right: -12px;
 				text-align: center;
 				top: -10px;
-				width: 24px;
+				width: 50px;
 				text-decoration: none;
-				font-weight: bold;
 				-webkit-border-radius: 12px;
 				-moz-border-radius: 12px;
-				border-radius: 12px;
+				border-radius: 25px;
 				-moz-box-shadow: 1px 1px 3px #000;
 				-webkit-box-shadow: 1px 1px 3px #000;
 				box-shadow: 1px 1px 3px #000;
+				font-size: 19px;
 			}
 
 			.close:hover { background: #00d9ff; }
@@ -230,7 +228,7 @@
 			<div>
 				<a  href="index.html" title="Close" class="close">X</a>
 				<p>Thank you for submitting your application.</p>
-				<p>We will get back to you as soon as possible.</p>
+				<p>Be sure to check your email for confirmation and updates!</p>
 			</div>
 		</div>
 		<script>
